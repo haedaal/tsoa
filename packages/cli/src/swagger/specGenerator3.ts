@@ -469,7 +469,7 @@ export class SpecGenerator3 extends SpecGenerator {
     if (dataType === 'any') {
       // Setting additionalProperties causes issues with code generators for OpenAPI 3
       // Therefore, we avoid setting it explicitly (since it's the implicit default already)
-      return {};
+      return { type: 'object' };
     }
 
     return super.getSwaggerTypeForPrimitiveType(dataType);

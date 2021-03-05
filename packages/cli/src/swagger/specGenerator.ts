@@ -150,6 +150,7 @@ export abstract class SpecGenerator {
 
     const map: Record<Tsoa.PrimitiveTypeLiteral, Swagger.Schema> = {
       any: {
+        type: 'object',
         // While the any type is discouraged, it does explicitly allows anything, so it should always allow additionalProperties
         additionalProperties: true,
       },
